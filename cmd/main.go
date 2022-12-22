@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/joho/godotenv"
-	"github.com/noah415/Recibase-business-logic/internal/router"
+	"github.com/noah415/jwt-go-server/internal/router"
 )
 
 func main() {

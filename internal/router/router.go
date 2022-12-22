@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/noah415/Recibase-business-logic/internal/middleware"
+	"github.com/noah415/jwt-go-server/internal/middleware"
 )
 
 var router = gin.Default()
@@ -15,9 +15,12 @@ func InitRouter() {
 }
 
 func getRoutes() {
+	// Non-Authorized Routes
 	InitHomeRoutes(router.Group("/"))
 	InitRegisterRoutes(router.Group("/register"))
 	InitLoginRoutes(router.Group("/login"))
+
+	// Authorized Routes
 	InitAuthorizeRoutes(router.Group("/auth", middleware.AuthorizeHandler()))
 }
 

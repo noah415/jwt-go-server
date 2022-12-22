@@ -2,7 +2,7 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/noah415/Recibase-business-logic/internal/application"
+	"github.com/noah415/jwt-go-server/internal/application"
 )
 
 func GetHome(c *gin.Context) {

@@ -4,8 +4,8 @@ import (
 	"errors"
 
 	"github.com/gin-gonic/gin"
-	"github.com/noah415/Recibase-business-logic/internal/application"
-	"github.com/noah415/Recibase-business-logic/internal/exception"
+	"github.com/noah415/jwt-go-server/internal/application"
+	"github.com/noah415/jwt-go-server/internal/exception"
 )
 
 func PostLogin(c *gin.Context) {

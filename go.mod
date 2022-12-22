@@ -1,4 +1,4 @@
-module github.com/noah415/Recibase-business-logic
+module github.com/noah415/jwt-go-server
 
 go 1.19
 
