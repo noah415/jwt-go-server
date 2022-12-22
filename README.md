@@ -130,3 +130,4 @@ make clean
 - https://github.com/golang-standards/project-layout
 - https://github.com/gin-gonic/gin
 - https://github.com/golang-jwt/jwt
+- https://dzone.com/articles/secret-rotation-for-jwt-tokens-1
