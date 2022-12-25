@@ -1,0 +1,15 @@
+# If port is not specified it defaults to 8080
+PORT=5050
+
+# Set to release for production environments
+GIN_MODE=debug
+
+# Token time values are represented in minutes
+REFRESH_TOKEN_LIFE=1440 # Refresh tokens expire 1440 minutes (1 day) after issued
+ACCESS_TOKEN_LIFE=5 # Access tokens export 5 minutes after issued
+
+# This can be any string 
+TOKEN_SECRET=some_secret
+
+# Time for a new secret to be generated in seconds
+SECRET_ROTATION=86400 # 1 day

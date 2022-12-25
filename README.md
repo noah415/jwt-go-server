@@ -8,6 +8,44 @@ This server has some baseline functionality to help get started creating new rou
 
 ## Getting Started
 
+### env file
+
+In order to correctly run the server, you need a .env file on the root level of the directory. Below is a description of the current env variables used in the env file.
+
+#### Example
+
+```txt
+# If port is not specified it defaults to 8080
+PORT=5050
+
+# Set to release for production environments
+GIN_MODE=debug
+
+# Token time values are represented in minutes
+REFRESH_TOKEN_LIFE=1440 # Refresh tokens expire 1440 minutes (1 day) after issued
+ACCESS_TOKEN_LIFE=5 # Access tokens export 5 minutes after issued
+
+# This can be any string 
+TOKEN_SECRET=some_secret
+
+# Time for a new secret to be generated in seconds
+SECRET_ROTATION=86400 # 1 day
+```
+
+#### Required
+
+- REFRESH_TOKEN_LIFE
+- ACCESS_TOKEN_LIFE
+- TOKEN_SECRET
+- SECRET_ROTATION
+
+#### Not Required
+
+- GIN_MODE
+- PORT
+
+### start commands
+
 The easiest way to start this server is to run the `run` make command in the project directory in a termainal.
 
 **NOTE:** all make command examples are ran using gin's debug mode. You can change this to release mode in the .env file when deploying into a production environment.
@@ -62,7 +100,7 @@ On the root layer of the project, there are 3 main folders. For more details on 
 
 ### cmd
 
-The cmd folder holds the main.go, which is just the entry point of the whole server. 
+The cmd folder holds the main.go, which is just the entry point of the whole server.
 
 ### internal
 
@@ -126,8 +164,8 @@ make clean
 
 ## Sources to check out
 
-- https://github.com/mir-mirsodikov
-- https://github.com/golang-standards/project-layout
-- https://github.com/gin-gonic/gin
-- https://github.com/golang-jwt/jwt
-- https://dzone.com/articles/secret-rotation-for-jwt-tokens-1
+- <https://github.com/mir-mirsodikov>
+- <https://github.com/golang-standards/project-layout>
+- <https://github.com/gin-gonic/gin>
+- <https://github.com/golang-jwt/jwt>
+- <https://dzone.com/articles/secret-rotation-for-jwt-tokens-1>
